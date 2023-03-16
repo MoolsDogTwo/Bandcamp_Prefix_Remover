@@ -12,7 +12,7 @@ def main():
         print("NOTE: Some characters may be dashes due to bandcamp's formatting.")
         print("In order to prevent issues, rename the folder to the song prefix!")
         
-        get_music = "The Caretaker - Everywhere, an empty bliss"
+        get_music = input("Paste folder name here: ")
 
         album_path = home_path / f"{get_music}/"
 
