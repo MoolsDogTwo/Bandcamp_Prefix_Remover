@@ -27,8 +27,8 @@ def main():
         system("clear")
         for file in album_path.iterdir():
             if get_music in str(file.relative_to(album_path)):  # Prevent doing operations on non-prefixed files.
+                # Cut off the prefix using string indexing.
                 removed_prefix = str(file.relative_to(album_path))[len(str(get_music)) + 3:]
-                print(removed_prefix)
                 print(f"{file.relative_to(album_path)} -> {removed_prefix}")
                 file.rename(album_path / removed_prefix)
                 times_converted += 1
