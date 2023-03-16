@@ -39,7 +39,13 @@ def main():
             print(f"Operation complete, {times_converted} files were converted!")
         else:
             print("No files were converted!")
-        break
+        
+        confirm_restart = input("Do you want to convert more albums? (y/n)").lower()
+
+        if confirm_restart == 'y':
+            continue
+        else:
+            break
 
 
 if __name__ == "__main__":
